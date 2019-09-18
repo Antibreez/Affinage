@@ -1,0 +1,120 @@
+.gallery-main {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  height: 318px;
+  width: 564px;
+  margin-left: -282px;
+
+  overflow: hidden;
+  z-index: 4;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(247, 230, 17, 0.6);
+  }
+}
+
+.gallery-main__wrapper-previous,
+.gallery-main__wrapper,
+.gallery-main__wrapper-next {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  transition-timing-function: ease-in-out;
+}
+
+.gallery-main__wrapper-previous {
+  right: 100%;
+
+  transition-property: right;
+}
+
+.gallery-main__wrapper {
+  right: 0;
+
+  transition-property: right;
+}
+
+.gallery-main__wrapper-next {
+  left: 100%;
+
+  transition-property: left;
+}
+
+.gallery-main img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-main {
+    left: auto;
+    right: 20%;
+
+    margin-left: 0;
+    margin-right: -100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery-main {
+    right: 80px;
+    bottom: 126px;
+
+    width: 860px;
+    height: 490px;
+    margin-right: 0;
+
+    background-color: #ffffff;
+
+    &::after {
+      background-color: rgba(247, 230, 17, 0.8);
+    }
+
+    &::before {
+      content: "ural 03";
+
+      position: absolute;
+      top: 32px;
+      left: 86px;
+
+      width: 100px;
+      height: 100px;
+      padding: 29px 21px 29px 24px;
+
+      font-family: @font-family-secondary;
+      font-size: 17px;
+      line-height: 21px;
+      letter-spacing: .126em;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      border: 1px solid #000000;
+      border-radius: 50%;
+
+      z-index: 5;
+    }
+  }
+
+  .gallery-main img {
+    opacity: .5;
+  }
+}

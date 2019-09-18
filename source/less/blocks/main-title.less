@@ -1,0 +1,50 @@
+.main-title {
+  position: absolute;
+
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .main-title {
+    left: 224px;
+    top: 324px;
+
+    display: block;
+    margin: 0;
+
+    font-size: 140px;
+    line-height: 152px;
+    font-weight: 400;
+    letter-spacing: .36em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    z-index: 7;
+
+    &::before,
+    &::after {
+      position: absolute;
+
+      left: 2px;
+
+      font-family: @font-family-secondary;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: .001em;
+      font-weight: 300;
+      color: #000000;
+    }
+
+    &::before {
+      content: "(1)";
+
+      top: -144px;
+    }
+
+    &::after {
+      content: "(3)";
+
+      top: -64px;
+    }
+  }
+}

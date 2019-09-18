@@ -1,0 +1,24 @@
+.page-title {
+  position: absolute;
+
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .page-title {
+    top: 400px;
+    left: -29px;
+
+    display: block;
+    margin: 0;
+
+    font-family: @font-family-secondary;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: .037em;
+    color: rgba(0, 0, 0, .4);
+
+    transform: rotate(-90deg);
+  }
+}

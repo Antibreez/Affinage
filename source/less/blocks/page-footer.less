@@ -1,0 +1,86 @@
+.page-footer {
+  position: absolute;
+
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    top: 707px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 93px;
+  }
+
+  .page-footer__black-triangle {
+    position: absolute;
+    right: 217px;
+    bottom: 42px;
+  }
+
+  .page-footer__transparent-triangle {
+    position: absolute;
+    right: 452px;
+    bottom: 23px;
+  }
+
+  .page-footer span {
+    position: absolute;
+
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    &:first-of-type  {
+      left: 267px;
+      bottom: 30px;
+    }
+
+    &:nth-of-type(2)  {
+      left: 332px;
+      bottom: 65px;
+    }
+
+    &:nth-of-type(3)  {
+      left: 396px;
+      bottom: 21px;
+    }
+
+    &:nth-of-type(4)  {
+      left: 455px;
+      bottom: 49px;
+    }
+
+    &:nth-of-type(5)  {
+      left: 521px;
+      bottom: 9px;
+    }
+
+    &:nth-of-type(6)  {
+      right: 493px;
+      bottom: 51px;
+    }
+
+    &:nth-of-type(7)  {
+      right: 391px;
+      bottom: 44px;
+    }
+
+    &:last-of-type {
+      right: 282px;
+      bottom: 17px;
+    }
+  }
+
+  .page-footer__g-shadow {
+    position: absolute;
+    right: 394px;
+    bottom: 48px;
+
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,57 @@
+.page-container {
+  .wrapper;
+
+  position: relative;
+
+  min-height: 568px;
+  height: 100vh;
+
+  background-color: #F7E611;
+  overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .page-container {
+    height: 568px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-container {
+    width: @desktop-width;
+    min-height: 800px;
+    height: 800px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+    }
+
+    &::before {
+      top: 184px;
+      left: 120px;
+
+      width: 600px;
+      height: 100vh;
+
+      background: linear-gradient(25deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+      box-shadow: -50px 0 100px rgba(0, 0, 0, 0.1);
+      opacity: .4;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+
+      width: 50%;
+      height: 100vh;
+
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
